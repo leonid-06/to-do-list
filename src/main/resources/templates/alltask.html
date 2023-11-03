@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>All Task</title>
-
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}"></script>
+    <script type="application/javascript" th:src="@{/js/first.js}"></script>
 </head>
 <body>
-<div>
-    <h1>Список задач</h1>
+<div class="task-list-container">
+    <h1 class="task-list-title">Список задач</h1>
     <ul>
-        <li th:each="task : ${tasks}" class="list-group-item">
-            <span th:text="${task.description}"></span>
+        <li th:each="task : ${tasks}" class="task-item">
+            <span th:text="${task.description}" class="task-description"></span>
+            <a th:href="@{/addTask}">Add</a>
+            <button th:attr="onclick='deleteTask(\'' + ${task.id} + '\')'" class="delete-button">Delete</button>
         </li>
     </ul>
+
+
+    <!-- Форма для добавления новой задачи -->
+
+
+
+
 </div>
+
 </body>
 </html>

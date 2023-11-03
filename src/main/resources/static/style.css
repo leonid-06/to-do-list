@@ -5,3 +5,45 @@
     width: 100px;
     height: 100px;
 }
+
+/* Стиль для обертки */
+.task-list-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* Стиль для заголовка списка */
+.task-list-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стиль для элементов списка задач */
+.task-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стиль для текста задачи */
+.task-description {
+    flex: 1;
+}
+
+/* Стиль для кнопки удаления задачи (если необходимо) */
+.delete-button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}

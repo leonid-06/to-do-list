@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TaskService {
@@ -25,5 +26,13 @@ public class TaskService {
 
     public List<Task> getAll(){
         return taskRepo.findAll();
+    }
+
+    public Optional<Task> getById(int id){
+        return taskRepo.findById(id);
+    }
+
+    public void deleteTask(Task task){
+        taskRepo.delete(task);
     }
 }
