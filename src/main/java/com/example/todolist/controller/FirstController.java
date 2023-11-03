@@ -40,7 +40,7 @@ public class FirstController {
     @PostMapping("/addTask")
     public String addTask(@ModelAttribute ("task") Task task){
         taskService.addTask(task);
-        return "redirect:/allTask";
+        return "redirect:/alltask";
     }
 
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
@@ -26,5 +27,11 @@ public class FirstRestController {
         optionalTask.ifPresent(taskService::deleteTask);
         System.out.println("------------");
         return ResponseEntity.ok("ok");
+    }
+
+    @PutMapping("/updateTaskStatus/{id}")
+    public ResponseEntity<?> updateStatus(@PathVariable int id){
+        taskService.updateStatus(id);
+        return ResponseEntity.ok("dl");
     }
 }

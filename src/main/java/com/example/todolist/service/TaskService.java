@@ -35,4 +35,14 @@ public class TaskService {
     public void deleteTask(Task task){
         taskRepo.delete(task);
     }
+
+    public void updateStatus(int id){
+        Optional<Task> optionalTask = taskRepo.findById(id);
+
+        if (optionalTask.isPresent()){
+            Task task = optionalTask.get();
+            task.setStatus(!task.isStatus());
+            taskRepo.save(task);
+        }
+    }
 }

@@ -9,11 +9,14 @@
 </head>
 <body>
 <div class="task-list-container">
-    <h1 class="task-list-title">Список задач</h1>
+    <h1 class="task-list-title">List of tasks</h1>
+    <a th:href="@{/addTask}">Add</a>
     <ul>
         <li th:each="task : ${tasks}" class="task-item">
+            <input type="checkbox" th:checked="${task.status}" class="task-completed"
+                   th:attr="onchange='toggleTaskCompletion(\'' + ${task.id} + '\', this)'">
+
             <span th:text="${task.description}" class="task-description"></span>
-            <a th:href="@{/addTask}">Add</a>
             <button th:attr="onclick='deleteTask(\'' + ${task.id} + '\')'" class="delete-button">Delete</button>
         </li>
     </ul>
