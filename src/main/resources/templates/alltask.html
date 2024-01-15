@@ -16,7 +16,7 @@
             <input type="checkbox" th:checked="${task.status}" class="task-completed"
                    th:attr="onchange='toggleTaskCompletion(\'' + ${task.id} + '\', this)'">
 
-            <span th:text="${task.description}" class="task-description"></span>
+            <span th:text="${task.name}" class="task-description"></span>
             <button th:attr="onclick='deleteTask(\'' + ${task.id} + '\')'" class="delete-button">Delete</button>
         </li>
     </ul>

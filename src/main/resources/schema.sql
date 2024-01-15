@@ -20,9 +20,6 @@ INSERT INTO task (name, description, updated, created, status)
 VALUES ('Read a book', 'mystery novel', '2023-11-03 15:00:00', '2023-11-03 15:00:00', true);
 
 INSERT INTO task (name, description, updated, created, status)
-VALUES ('Exercise', 'go to the gym', '2023-11-03 16:00:00', '2023-11-03 16:00:00', false);
-
-INSERT INTO task (name, description, updated, created, status)
 VALUES ('Call a friend', 'catching up', '2023-11-03 17:00:00', '2023-11-03 17:00:00', true);
 
 INSERT INTO task (name, description, updated, created, status)
